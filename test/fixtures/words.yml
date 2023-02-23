@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  'no': 
+  word: MyString
+  hurigana: MyString
+  okurigana: MyString
+  yomigana: MyString
+  mean: MyString
+  grade: 1
+
+two:
+  'no': 
+  word: MyString
+  hurigana: MyString
+  okurigana: MyString
+  yomigana: MyString
+  mean: MyString
+  grade: 1
