@@ -1,6 +1,10 @@
 class Japanego::V1::WordController < ApplicationController
   def index
-    words = Word.order('no ASC');
+    words = Word.where("WORD LIKE #{ params[:search] }")
+                .or(Word.where("HURIGANA LIKE #{ params[:search] }"))
+                .or(Word.where("OKURIGANA LIKE #{ params[:search] }"))
+                .or(Word.where("YOMIGANA LIKE #{ params[:search] }"))
+                .paginate(page: params[:page], per_page: params[:size])
     render json: {status: 'SUCCESS', message:'Loaded all Words', data:words},status: :ok
   end
 

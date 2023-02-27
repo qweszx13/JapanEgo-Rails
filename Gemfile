@@ -6,6 +6,9 @@ ruby "2.7.7"
 # Use mysql2
 gem "mysql2", "~> 0.5.5"
 
+# Use Pagination
+gem 'will_paginate', '3.1.0'
+
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem 'rack-cors'
 
