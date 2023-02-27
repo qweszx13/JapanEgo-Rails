@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  namespace 'api' do
+  namespace 'japanego' do
     namespace 'v1' do
       resources :word
     end

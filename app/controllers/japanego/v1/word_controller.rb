@@ -1,4 +1,4 @@
-class Api::V1::WordController < ApplicationController
+class Japanego::V1::WordController < ApplicationController
   def index
     words = Word.order('no ASC');
     render json: {status: 'SUCCESS', message:'Loaded all Words', data:words},status: :ok
