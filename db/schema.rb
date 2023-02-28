@@ -34,6 +34,11 @@ ActiveRecord::Schema[7.0].define(version: 0) do
     t.index ["WORD_NO"], name: "FK_WORD_NO_2"
   end
 
+  create_table "SEQUENCES", id: false, charset: "utf8mb3", force: :cascade do |t|
+    t.string "NAME", limit: 32
+    t.bigint "CURRVAL", unsigned: true
+  end
+
   create_table "WORDBANKS", primary_key: "NO", id: :bigint, default: nil, charset: "utf8mb3", force: :cascade do |t|
     t.bigint "OWNER_NO", null: false
     t.string "NAME", limit: 50, null: false
@@ -60,11 +65,6 @@ ActiveRecord::Schema[7.0].define(version: 0) do
     t.datetime "MODIFIED_DATE", precision: nil, default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.string "DEL_FLAG", limit: 2, default: "0", null: false
     t.index ["WORDBANK_NO"], name: "FK_WORDBANK_NO"
-  end
-
-  create_table "seq_mysql", id: false, charset: "utf8mb3", force: :cascade do |t|
-    t.integer "id", null: false
-    t.string "seq_name", limit: 50, null: false
   end
 
   add_foreign_key "AUTHORITIES", "MEMBERS", column: "MEMBER_NO", primary_key: "NO", name: "FK_MEMBER_NO_3"

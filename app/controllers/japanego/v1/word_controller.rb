@@ -49,7 +49,7 @@ class Japanego::V1::WordController < ApplicationController
   private
 
   def word_params
-    params.permit(:no, :word, :hurigana, :okurigana, :yomigana, :mean, :grade)
+    params.permit(:NO, :WORD, :HURIGANA, :OKURIGANA, :YOMIGANA, :MEAN, :GRADE)
   end
 
 end

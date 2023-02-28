@@ -1,9 +1,9 @@
 class Word < ApplicationRecord
-  validates :no, presence: true
-  validates :word, presence: true
-  validates :hurigana, presence: true
-  validates :okurigana, presence: true
-  validates :yomigana, presence: true
-  validates :mean, presence: true
-  validates :grade, presence: true
+  validates :NO, presence: true
+  validates :WORD, presence: true
+  validates :HURIGANA, presence: true
+  validates :OKURIGANA, presence: true
+  validates :YOMIGANA, presence: true
+  validates :MEAN, presence: true
+  validates :GRADE, presence: true
 end
