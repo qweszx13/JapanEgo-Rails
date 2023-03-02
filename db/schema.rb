@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 0) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_02_102018) do
   create_table "AUTHORITIES", id: false, charset: "utf8mb3", force: :cascade do |t|
     t.bigint "MEMBER_NO", null: false
     t.string "AUTHORITY", limit: 50, default: "ROLE_USER", null: false
