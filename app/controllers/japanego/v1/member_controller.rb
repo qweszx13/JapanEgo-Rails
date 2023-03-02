@@ -12,7 +12,7 @@ class Japanego::V1::MemberController < ApplicationController
   def create
     member = Member.new(member_params)
     member.NO = Member.last.id + 1;
-    memeber_email_verification(member.EMAIL) ? nil : return
+    member_email_verification(member.EMAIL) ? nil : return
     if member.save
       render json: {status: 'SUCCESS', message:'Created member', data:member},status: :ok
     else
@@ -37,7 +37,7 @@ class Japanego::V1::MemberController < ApplicationController
 
   private
 
-  def memeber_email_verification(email)
+  def member_email_verification(email)
     if Member.find_by(EMAIL: email)
       render json: {status: 'ERROR', message:'Already Signup Email'},status: :forbidden
       return false
